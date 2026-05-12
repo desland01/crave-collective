@@ -250,7 +250,7 @@ export default function Home() {
           </div>
           <div data-anim="founder-text" className="lg:col-span-6 lg:col-start-7 flex flex-col gap-8">
             <Eyebrow>A note from Dante</Eyebrow>
-            <H3 className="leading-[1.2]">
+            <H3 className="text-xl leading-[1.2]">
               We believe video content should be more than entertaining. It should move the needle. For us, that means working closely with you to understand your unique business and creating cinematic content designed to hit your specific objectives — sales, awareness, loyalty. We&rsquo;re not making content for content&rsquo;s sake. We&rsquo;re making the film that closes the deal.
             </H3>
             <Caption>— Dante, Founder &amp; Creative Director</Caption>
