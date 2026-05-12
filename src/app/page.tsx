@@ -229,9 +229,9 @@ export default function Home() {
       </section>
 
       {/* Section 6 — Founder note */}
-      <section aria-label="A note from Dante" className="bg-(--color-bg-canvas) px-6 lg:px-40 py-32 lg:py-48">
+      <section aria-label="A note from Dante" className="bg-(--color-bg-canvas) px-6 lg:px-40 py-40 lg:py-56">
         <div className="mx-auto w-full max-w-[1680px] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 lg:sticky lg:top-24 lg:self-start">
             <div
               data-anim="founder-portrait"
               className="relative aspect-[4/5] w-full overflow-hidden bg-(--color-bg-elevated)"
@@ -249,7 +249,7 @@ export default function Home() {
           </div>
           <div data-anim="founder-text" className="lg:col-span-6 lg:col-start-7 flex flex-col gap-8">
             <Eyebrow>A note from Dante</Eyebrow>
-            <H3 className="text-xl leading-[1.2]">
+            <H3 className="text-s lg:text-xl leading-[1.3]">
               We believe video content should be more than entertaining. It should move the needle. For us, that means working closely with you to understand your unique business and creating cinematic content designed to hit your specific objectives — sales, awareness, loyalty. We&rsquo;re not making content for content&rsquo;s sake. We&rsquo;re making the film that closes the deal.
             </H3>
             <Caption>— Dante, Founder &amp; Creative Director</Caption>
