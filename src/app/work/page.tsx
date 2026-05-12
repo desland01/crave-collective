@@ -8,6 +8,8 @@ import { Eyebrow } from "@/components/primitives/Eyebrow";
 import { Caption } from "@/components/primitives/Caption";
 import { PrimaryButton } from "@/components/primitives/PrimaryButton";
 
+const R2 = "https://pub-733eaf5743f540d69e17d406d88428c4.r2.dev";
+
 const BOOKING_URL =
   "https://api.leadconnectorhq.com/widget/bookings/ss123-c23343ec-b4bd-4762-a7d8-85f203949a397pcgpz";
 
@@ -20,7 +22,7 @@ type Reel = {
 };
 
 const featured: Reel = {
-  video: "/videos/reel-dedicated-to-sell.mp4",
+  video: `${R2}/videos/reel-dedicated-to-sell.mp4`,
   poster: "/posters/reel-dedicated-to-sell.jpg",
   client: "Dedicated To Sell",
   context: "Sarasota luxury listing — drone, walk-through, and on-camera presence.",
@@ -29,7 +31,7 @@ const featured: Reel = {
 
 const realEstateVerticals: Reel[] = [
   {
-    video: "/videos/reel-real-estate.mp4",
+    video: `${R2}/videos/reel-real-estate.mp4`,
     poster: "/posters/reel-real-estate.jpg",
     client: "RNW Construction",
     context: "Longboat Key at the Promenade — new-build reveal.",
@@ -39,21 +41,21 @@ const realEstateVerticals: Reel[] = [
 
 const localPros: Reel[] = [
   {
-    video: "/videos/reel-painter.mp4",
+    video: `${R2}/videos/reel-painter.mp4`,
     poster: "/posters/reel-painter.jpg",
     client: "Grove Street Painting",
     context: "Owner-on-camera reel for the Sarasota painter.",
     aspect: "9/16",
   },
   {
-    video: "/videos/reel-fitness.mp4",
+    video: `${R2}/videos/reel-fitness.mp4`,
     poster: "/posters/reel-fitness.jpg",
     client: "Outdoor coach",
     context: "NoBull-clad athlete portrait — personal trainer brand piece.",
     aspect: "9/16",
   },
   {
-    video: "/videos/reel-chiro.mp4",
+    video: `${R2}/videos/reel-chiro.mp4`,
     poster: "/posters/reel-chiro.jpg",
     client: "Vertical Chiropractic",
     context: "Clinician explainer — credibility upfront.",
@@ -63,14 +65,14 @@ const localPros: Reel[] = [
 
 const brandFilms: Reel[] = [
   {
-    video: "/videos/reel-sandals.mp4",
+    video: `${R2}/videos/reel-sandals.mp4`,
     poster: "/posters/reel-sandals.jpg",
     client: "Sandals Resorts",
     context: "Resort destination film — Caribbean.",
     aspect: "16/9",
   },
   {
-    video: "/videos/reel-virgin-voyages.mp4",
+    video: `${R2}/videos/reel-virgin-voyages.mp4`,
     poster: "/posters/reel-virgin-voyages.jpg",
     client: "Virgin Voyages",
     context: "Cruise-line destination video — Mallorca.",
@@ -80,14 +82,14 @@ const brandFilms: Reel[] = [
 
 const colorScience: Reel[] = [
   {
-    video: "/videos/reel-colors-you-crave.mp4",
+    video: `${R2}/videos/reel-colors-you-crave.mp4`,
     poster: "/posters/reel-colors-you-crave.jpg",
     client: "Dante's LUTs — product demo",
     context: "Split-screen graded vs ungraded — the colors you crave, out of the box.",
     aspect: "16/9",
   },
   {
-    video: "/videos/reel-hvar-away.mp4",
+    video: `${R2}/videos/reel-hvar-away.mp4`,
     poster: "/posters/reel-hvar-away.jpg",
     client: "Hvar Away — color in the wild",
     context: "The same color science shipped on a destination brand piece in Croatia.",
@@ -96,7 +98,7 @@ const colorScience: Reel[] = [
 ];
 
 const brandSizzle: Reel = {
-  video: "/videos/hero-loop.mp4",
+  video: `${R2}/videos/hero-loop.mp4`,
   poster: "/posters/hero.jpg",
   client: "Crave Collective",
   context: "Brand sizzle — every vertical, one signature.",

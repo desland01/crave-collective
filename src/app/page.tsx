@@ -11,6 +11,8 @@ import { Body } from "@/components/primitives/Body";
 import { Caption } from "@/components/primitives/Caption";
 import { PrimaryButton } from "@/components/primitives/PrimaryButton";
 
+const R2 = "https://pub-733eaf5743f540d69e17d406d88428c4.r2.dev";
+
 const BOOKING_URL =
   "https://api.leadconnectorhq.com/widget/bookings/ss123-c23343ec-b4bd-4762-a7d8-85f203949a397pcgpz";
 
@@ -64,7 +66,7 @@ export default function Home() {
             preload="metadata"
             className="absolute inset-0 h-full w-full object-cover"
           >
-            <source src="/videos/hero-loop.mp4" type="video/mp4" />
+            <source src={`${R2}/videos/hero-loop.mp4`} type="video/mp4" />
           </video>
         </div>
         <div className="absolute inset-0 bg-black/35" />
@@ -127,7 +129,7 @@ export default function Home() {
                   preload="metadata"
                   className="absolute inset-0 h-full w-full object-cover"
                 >
-                  <source src="/videos/reel-real-estate.mp4" type="video/mp4" />
+                  <source src={`${R2}/videos/reel-real-estate.mp4`} type="video/mp4" />
                 </video>
               </div>
               <Caption>Longboat Key at the Promenade — RNW Construction</Caption>
@@ -159,7 +161,7 @@ export default function Home() {
                   className="absolute inset-0 h-full w-full object-cover"
                   style={{ objectPosition: "35% 50%" }}
                 >
-                  <source src="/videos/reel-dedicated-to-sell.mp4" type="video/mp4" />
+                  <source src={`${R2}/videos/reel-dedicated-to-sell.mp4`} type="video/mp4" />
                 </video>
               </div>
               <Caption>Dedicated To Sell — Sarasota luxury listing</Caption>
@@ -187,10 +189,7 @@ export default function Home() {
                 width={240}
                 height={80}
                 loading="lazy"
-                className="h-20 w-auto shrink-0 opacity-80"
-                style={{
-                  filter: "grayscale(100%) brightness(0) invert(1) opacity(0.7)",
-                }}
+                className="h-20 w-auto shrink-0 opacity-95"
               />
             ))}
           </div>
