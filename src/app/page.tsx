@@ -17,17 +17,21 @@ const BOOKING_URL =
   "https://api.leadconnectorhq.com/widget/bookings/ss123-c23343ec-b4bd-4762-a7d8-85f203949a397pcgpz";
 
 const clientLogos = [
-  { src: "/clients/paintco.png", alt: "PaintCo" },
-  { src: "/clients/robbins.png", alt: "Robbins Real Estate" },
-  { src: "/clients/compass.png", alt: "Compass" },
-  { src: "/clients/vertical-chiropractic.webp", alt: "Vertical Chiropractic" },
-  { src: "/clients/rush-cycle.png", alt: "Rush Cycle" },
-  { src: "/clients/pod-company.png", alt: "The Pod Company" },
-  { src: "/clients/virgin-voyages.png", alt: "Virgin Voyages" },
-  { src: "/clients/3form.png", alt: "3form" },
-  { src: "/clients/shred.png", alt: "Shred" },
-  { src: "/clients/team-ltd.png", alt: "Team Ltd" },
+  { src: "/clients/paintco.png", alt: "PaintCo", width: 400, height: 400 },
+  { src: "/clients/robbins.png", alt: "Robbins Real Estate", width: 2500, height: 2500 },
+  { src: "/clients/compass.png", alt: "Compass", width: 616, height: 362 },
+  { src: "/clients/vertical-chiropractic.webp", alt: "Vertical Chiropractic", width: 1000, height: 739 },
+  { src: "/clients/rush-cycle.png", alt: "Rush Cycle", width: 600, height: 120 },
+  { src: "/clients/pod-company.png", alt: "The Pod Company", width: 679, height: 308 },
+  { src: "/clients/virgin-voyages.png", alt: "Virgin Voyages", width: 1674, height: 2048 },
+  { src: "/clients/3form.png", alt: "3form", width: 563, height: 563 },
+  { src: "/clients/shred.png", alt: "Shred", width: 2500, height: 596 },
+  { src: "/clients/team-ltd.png", alt: "Team Ltd", width: 1920, height: 1080 },
 ];
+
+const clientLogoSlotClass =
+  "flex h-[58px] w-[156px] shrink-0 items-center justify-center lg:h-[64px] lg:w-[220px]";
+const clientLogoClass = "max-h-full max-w-full object-contain opacity-90";
 
 const pillars = [
   {
@@ -70,7 +74,7 @@ export default function Home() {
           </video>
         </div>
         <div className="absolute inset-0 bg-black/35" />
-        <div className="relative z-10 flex h-full flex-col justify-end px-6 lg:px-12 pb-16 lg:pb-24">
+        <div className="relative z-10 flex h-full flex-col justify-end px-6 lg:px-12 pb-[112px] lg:pb-24">
           <div data-anim="hero-stack" className="mx-auto w-full max-w-[1680px] space-y-6 lg:space-y-8">
             <Eyebrow>Crave Collective — Sarasota</Eyebrow>
             <Display className="max-w-[18ch] text-[44px] sm:text-[64px] lg:text-display leading-[0.95] text-balance">
@@ -177,21 +181,42 @@ export default function Home() {
         </Eyebrow>
         <div className="relative overflow-hidden border-y border-(--color-line-hairline) py-12">
           <div
-            className="flex w-max items-center gap-32 whitespace-nowrap"
-            style={{ animation: `marquee-x 90s linear infinite` }}
+            className="logo-marquee-track flex w-max items-center whitespace-nowrap"
+            data-logo-marquee
           >
-            {[...clientLogos, ...clientLogos].map((logo, i) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                key={`${logo.alt}-${i}`}
-                src={logo.src}
-                alt={logo.alt}
-                width={240}
-                height={80}
-                loading="lazy"
-                className="h-20 w-auto shrink-0 opacity-95"
-              />
-            ))}
+            <div className="logo-marquee-group flex min-w-[calc(100vw+20rem)] shrink-0 items-center justify-between gap-[clamp(56px,7vw,128px)] pr-[clamp(96px,10vw,180px)]">
+              {clientLogos.map((logo) => (
+                <div key={logo.alt} className={clientLogoSlotClass}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.width}
+                    height={logo.height}
+                    loading="lazy"
+                    className={clientLogoClass}
+                  />
+                </div>
+              ))}
+            </div>
+            <div
+              aria-hidden="true"
+              className="logo-marquee-group logo-marquee-clone flex min-w-[calc(100vw+20rem)] shrink-0 items-center justify-between gap-[clamp(56px,7vw,128px)] pr-[clamp(96px,10vw,180px)]"
+            >
+              {clientLogos.map((logo) => (
+                <div key={`${logo.alt}-clone`} className={clientLogoSlotClass}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={logo.src}
+                    alt=""
+                    width={logo.width}
+                    height={logo.height}
+                    loading="lazy"
+                    className={clientLogoClass}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
           {/* Edge fade masks for cinematic feel */}
           <div
@@ -231,7 +256,8 @@ export default function Home() {
       {/* Section 6 — Founder note */}
       <section aria-label="A note from Dante" className="bg-(--color-bg-canvas) px-6 lg:px-40 py-40 lg:py-56">
         <div className="mx-auto w-full max-w-[1680px] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
-          <div className="lg:col-span-5 lg:sticky lg:top-24 lg:self-start">
+          <div className="lg:col-span-5 lg:sticky lg:top-[96px] lg:self-start flex flex-col gap-6">
+            <Eyebrow>A note from Dante</Eyebrow>
             <div
               data-anim="founder-portrait"
               className="relative aspect-[4/5] w-full overflow-hidden bg-(--color-bg-elevated)"
@@ -248,7 +274,6 @@ export default function Home() {
             </div>
           </div>
           <div data-anim="founder-text" className="lg:col-span-6 lg:col-start-7 flex flex-col gap-8">
-            <Eyebrow>A note from Dante</Eyebrow>
             <H3 className="text-s lg:text-xl leading-[1.3]">
               We believe video content should be more than entertaining. It should move the needle. For us, that means working closely with you to understand your unique business and creating cinematic content designed to hit your specific objectives — sales, awareness, loyalty. We&rsquo;re not making content for content&rsquo;s sake. We&rsquo;re making the film that closes the deal.
             </H3>
@@ -263,7 +288,7 @@ export default function Home() {
           <Eyebrow as="p" className="block text-center">
             What clients say
           </Eyebrow>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-12 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-16 lg:gap-x-[10%] lg:gap-y-0 items-stretch">
             <div data-anim="testimonial" className="flex">
               <Testimonial
                 className="h-full justify-between"

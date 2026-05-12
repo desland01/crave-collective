@@ -63,6 +63,8 @@ const localPros: Reel[] = [
   },
 ];
 
+const verticalReels = [...realEstateVerticals, ...localPros];
+
 const brandFilms: Reel[] = [
   {
     video: `${R2}/videos/reel-sandals.mp4`,
@@ -176,53 +178,41 @@ export default function WorkIndex() {
         </div>
       </section>
 
-      {/* Section 3 — Real estate verticals */}
+      {/* Section 3 — Vertical reels */}
       <section
-        aria-label="Real estate"
+        aria-label="Vertical reels"
         className="px-6 lg:px-12 py-16 lg:py-24 border-t border-(--color-line-hairline)"
       >
         <div className="mx-auto w-full max-w-[1680px] grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-          <div className="lg:col-span-4 flex flex-col gap-6">
-            <Eyebrow>Real estate</Eyebrow>
-            <H2 className="text-[40px] lg:text-m leading-[1.1]">
-              Listing films and agent reels.
-            </H2>
-            <Body>
-              Vertical-first content for the producer agents and new-construction teams who need every showing to feel inevitable.
-            </Body>
+          <div className="lg:col-span-4 flex flex-col gap-8">
+            <div className="flex flex-col gap-6">
+              <Eyebrow>Real estate</Eyebrow>
+              <H2 className="text-[40px] lg:text-m leading-[1.1]">
+                Listing films and agent reels.
+              </H2>
+              <Body>
+                Vertical-first content for the producer agents and new-construction teams who need every showing to feel inevitable.
+              </Body>
+            </div>
+            <div className="flex flex-col gap-6 border-t border-(--color-line-hairline) pt-8">
+              <Eyebrow>Local service pros</Eyebrow>
+              <H2 className="text-[40px] lg:text-m leading-[1.1]">
+                Owner-on-camera, trust upfront.
+              </H2>
+              <Body>
+                Painters, gyms, clinicians — service pros who want to be the obvious local choice. Cinematic enough to earn the click, real enough to earn the booking.
+              </Body>
+            </div>
           </div>
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-10">
-            {realEstateVerticals.map((reel) => (
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-10">
+            {verticalReels.map((reel) => (
               <ReelTile key={reel.client} reel={reel} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 4 — Local pros */}
-      <section
-        aria-label="Local service pros"
-        className="px-6 lg:px-12 py-16 lg:py-24 border-t border-(--color-line-hairline)"
-      >
-        <div className="mx-auto w-full max-w-[1680px] grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-          <div className="lg:col-span-4 flex flex-col gap-6">
-            <Eyebrow>Local service pros</Eyebrow>
-            <H2 className="text-[40px] lg:text-m leading-[1.1]">
-              Owner-on-camera, trust upfront.
-            </H2>
-            <Body>
-              Painters, gyms, clinicians — service pros who want to be the obvious local choice. Cinematic enough to earn the click, real enough to earn the booking.
-            </Body>
-          </div>
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {localPros.map((reel) => (
-              <ReelTile key={reel.client} reel={reel} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5 — Brand films */}
+      {/* Section 4 — Brand films */}
       <section
         aria-label="Brand films"
         className="px-6 lg:px-12 py-16 lg:py-24 border-t border-(--color-line-hairline)"
@@ -247,7 +237,7 @@ export default function WorkIndex() {
         </div>
       </section>
 
-      {/* Section 6 — Color science */}
+      {/* Section 5 — Color science */}
       <section
         aria-label="Color science"
         className="px-6 lg:px-12 py-16 lg:py-24 border-t border-(--color-line-hairline)"
@@ -278,7 +268,7 @@ export default function WorkIndex() {
         </div>
       </section>
 
-      {/* Section 7 — Brand sizzle */}
+      {/* Section 6 — Brand sizzle */}
       <section
         aria-label="Brand sizzle"
         className="px-6 lg:px-12 py-16 lg:py-24 border-t border-(--color-line-hairline)"
@@ -294,7 +284,7 @@ export default function WorkIndex() {
         </div>
       </section>
 
-      {/* Section 8 — CTA */}
+      {/* Section 7 — CTA */}
       <section
         aria-label="Book a Game Plan Call"
         className="bg-(--color-bg-elevated) px-6 lg:px-12 py-32 lg:py-48"

@@ -114,11 +114,26 @@ body {
 }
 
 /* Marquee infinite scroll keyframe */
+.logo-marquee-track {
+  animation: marquee-x 90s linear infinite;
+}
+
 @keyframes marquee-x {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee-track {
+    animation: none;
+    transform: none;
+  }
+
+  .logo-marquee-clone {
+    display: none;
   }
 }

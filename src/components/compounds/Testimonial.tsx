@@ -19,7 +19,7 @@ export function Testimonial({
   return (
     <figure className={`flex flex-col gap-12 w-full ${className}`}>
       <blockquote
-        className="font-display text-s lg:text-m font-normal text-(--color-ink-primary) leading-[1.2]"
+        className="font-display text-[30px] sm:text-[34px] lg:text-[50px] font-normal text-(--color-ink-primary) leading-[1.15]"
         style={{ fontFamily: "var(--font-display)" }}
       >
         “{quote}”
