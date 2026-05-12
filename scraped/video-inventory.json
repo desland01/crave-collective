@@ -1,0 +1,79 @@
+{
+  "native_videos": [
+    {
+      "page": "home",
+      "systemDataId": "69852ecc-12f3-40eb-848b-3d106f40853c",
+      "filename": "Website Header.mov",
+      "attr": "data-config-native-video",
+      "variants": "1920:1080,640:360",
+      "duration": 28.166667,
+      "aspect": 1.7777777777777777,
+      "alexandriaUrl": "https://video.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/69852ecc-12f3-40eb-848b-3d106f40853c/{variant}",
+      "poster": null
+    },
+    {
+      "page": "work",
+      "systemDataId": "af997073-bc8b-42a2-86dc-7532be6a8036",
+      "filename": null,
+      "attr": "data-config-video",
+      "variants": "1080:1920,360:640",
+      "duration": 51.375,
+      "aspect": 0.5625,
+      "alexandriaUrl": "https://video.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/af997073-bc8b-42a2-86dc-7532be6a8036/{variant}",
+      "poster": "https://images.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/c8459b45-49df-467e-b940-a47f017f21ea/Still+2026-04-11+090537_2.9.1.jpg"
+    },
+    {
+      "page": "work",
+      "systemDataId": "e3da4959-9fe1-4e0f-a45e-9a6eb730cb64",
+      "filename": null,
+      "attr": "data-config-video",
+      "variants": "1080:1920,360:640",
+      "duration": 47.25,
+      "aspect": 0.5625,
+      "alexandriaUrl": "https://video.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/e3da4959-9fe1-4e0f-a45e-9a6eb730cb64/{variant}",
+      "poster": "https://images.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/aef4bf1c-1860-4b6c-a510-df649f80ad78/Still+2026-05-04+092803_4.3.1.jpg"
+    },
+    {
+      "page": "work",
+      "systemDataId": "05b294fc-5c79-4b91-9ecc-afb3e84fb0a2",
+      "filename": null,
+      "attr": "data-config-video",
+      "variants": "1080:1920,360:640",
+      "duration": 41.625,
+      "aspect": 0.5625,
+      "alexandriaUrl": "https://video.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/05b294fc-5c79-4b91-9ecc-afb3e84fb0a2/{variant}",
+      "poster": "https://images.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/1095acb3-d6e2-484c-b32f-35321d7e8d9d/Still+2026-04-11+093139_1.11.1.jpg"
+    },
+    {
+      "page": "work",
+      "systemDataId": "c2eba300-1ca7-4b76-9d5a-706ea5871904",
+      "filename": null,
+      "attr": "data-config-video",
+      "variants": "1080:1920,360:640",
+      "duration": 42.416667,
+      "aspect": 0.5625,
+      "alexandriaUrl": "https://video.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/c2eba300-1ca7-4b76-9d5a-706ea5871904/{variant}",
+      "poster": "https://images.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/caf8dffb-f418-466e-9d7a-792190892b15/Still+2026-04-11+091404_2.15.1.jpg"
+    },
+    {
+      "page": "work",
+      "systemDataId": "6e066b9b-41a2-48e5-88be-8244f360251b",
+      "filename": null,
+      "attr": "data-config-video",
+      "variants": "1080:1920,360:640",
+      "duration": 55.833333,
+      "aspect": 0.5625,
+      "alexandriaUrl": "https://video.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/6e066b9b-41a2-48e5-88be-8244f360251b/{variant}",
+      "poster": "https://images.squarespace-cdn.com/content/v1/649711570f0b782bd0056702/fd00b2ee-cde2-4458-9619-fc4bcf519bd5/Still+2026-04-11+094035_1.12.1.jpg"
+    }
+  ],
+  "vimeo_ids": [
+    "1000908347",
+    "1001966331",
+    "1084106061",
+    "1088096342",
+    "1182049959",
+    "1182054141"
+  ],
+  "youtube_ids": []
+}

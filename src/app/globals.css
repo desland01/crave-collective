@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color — dark mode (default) */
+  --color-bg-canvas: #0B0B0C;
+  --color-bg-elevated: #141416;
+  --color-bg-paper: #F4F1EA;
+  --color-ink-primary: #F4F1EA;
+  --color-ink-secondary: rgba(244, 241, 234, 0.72);
+  --color-ink-muted: rgba(244, 241, 234, 0.48);
+  --color-ink-overlay-white-8: rgba(255, 255, 255, 0.08);
+  --color-line-hairline: rgba(244, 241, 234, 0.12);
+  --color-accent-primary: #B88246;
+  --color-accent-on-accent: #0B0B0C;
+  --color-state-error: #C84B3A;
+
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-96: 96px;
+  --spacing-128: 128px;
+  --spacing-160: 160px;
+
+  /* Radius */
+  --radius-0: 0px;
+  --radius-2: 2px;
+  --radius-full: 9999px;
+
+  /* Motion */
+  --motion-duration-entrance: 900ms;
+  --motion-duration-exit: 400ms;
+  --motion-duration-scroll: 1200ms;
+  --motion-easing-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+  --motion-easing-scroll: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Typography — sizes only; family + weight set per component */
+  --text-display: 128px;
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.03em;
+  --text-xl: 96px;
+  --text-xl--line-height: 1;
+  --text-xl--letter-spacing: -0.025em;
+  --text-l: 64px;
+  --text-l--line-height: 1.05;
+  --text-l--letter-spacing: -0.02em;
+  --text-m: 40px;
+  --text-m--line-height: 1.15;
+  --text-m--letter-spacing: -0.015em;
+  --text-s: 24px;
+  --text-s--line-height: 1.35;
+  --text-s--letter-spacing: -0.005em;
+  --text-xs: 18px;
+  --text-xs--line-height: 1.5;
+  --text-caption: 14px;
+  --text-caption--line-height: 1.4;
+  --text-caption--letter-spacing: 0.08em;
+
+  /* Font family tokens, wired by next/font in layout.tsx */
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+
+  /* Custom breakpoints to match design grid */
+  --breakpoint-2xl: 1680px;
+}
+
+/* Paper mode overrides */
+[data-theme="paper"] {
+  --color-bg-canvas: #F4F1EA;
+  --color-bg-elevated: #EAE5DA;
+  --color-ink-primary: #0B0B0C;
+  --color-ink-secondary: rgba(11, 11, 12, 0.72);
+  --color-ink-muted: rgba(11, 11, 12, 0.48);
+  --color-ink-overlay-white-8: rgba(11, 11, 12, 0.06);
+  --color-line-hairline: rgba(11, 11, 12, 0.12);
+  --color-state-error: #9C2A1E;
+}
+
+/* Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html,
+body {
+  background: var(--color-bg-canvas);
+  color: var(--color-ink-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+/* Section wrappers apply data-theme="paper" inline — inherit canvas color */
+[data-theme="paper"] {
+  background: var(--color-bg-canvas);
+  color: var(--color-ink-primary);
+}
+
+/* Marquee infinite scroll keyframe */
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
