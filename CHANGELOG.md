@@ -2,6 +2,15 @@
 
 All notable changes to the Crave Collective website project.
 
+## 2026-05-15
+
+### Meta campaign dashboard
+- Added `/meta` as the Crave Collective campaign command center for client Meta spend, optimization review, discovery-call ROI modeling, CSV-based ROAS calculation, and branded PDF-ready reporting.
+- Added a proposal ROI tool that compares creative types by CPL range, close-rate lift, average job value, projected revenue, and ROAS to show why CPL is not the primary scoreboard.
+- Added a CSV importer for Meta Google Sheet exports with column detection, fallback revenue modeling, campaign grouping, optimization recommendations, and report-summary updates.
+- Added `docs/campaign-dashboard/meta-google-sheets-csv-setup.md` with the friendly Google Sheets/Meta CSV setup workflow and required columns.
+- Kept the dashboard under `/meta`; `/dashboard` is not a live route.
+
 ## 2026-05-12
 
 ### Founder portrait fix

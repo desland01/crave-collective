@@ -137,3 +137,40 @@ body {
     display: none;
   }
 }
+
+@media print {
+  body.is-campaign-printing {
+    background: #fff;
+    color: #0b0b0c;
+    padding: 0;
+  }
+
+  body.is-campaign-printing * {
+    visibility: hidden;
+  }
+
+  body.is-campaign-printing #campaign-report,
+  body.is-campaign-printing #campaign-report * {
+    visibility: visible;
+  }
+
+  body.is-campaign-printing #campaign-report {
+    display: block !important;
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    min-height: 100%;
+    border: 0;
+    background: #f4f1ea;
+    box-shadow: none;
+  }
+
+  body.is-campaign-printing .print-hide {
+    display: none !important;
+  }
+
+  body.is-campaign-printing .print-break-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
