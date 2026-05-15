@@ -7,7 +7,7 @@
   --color-bg-paper: #F4F1EA;
   --color-ink-primary: #F4F1EA;
   --color-ink-secondary: rgba(244, 241, 234, 0.72);
-  --color-ink-muted: rgba(244, 241, 234, 0.48);
+  --color-ink-muted: rgba(244, 241, 234, 0.56);
   --color-ink-overlay-white-8: rgba(255, 255, 255, 0.08);
   --color-line-hairline: rgba(244, 241, 234, 0.12);
   --color-accent-primary: #B88246;
@@ -66,6 +66,11 @@
   --font-display: var(--font-fraunces);
   --font-sans: var(--font-inter);
 
+  /* Glass morphism */
+  --glass-bg: rgba(11, 11, 12, 0.80);
+  --glass-border: rgba(244, 241, 234, 0.08);
+  --glass-blur: 20px;
+
   /* Custom breakpoints to match design grid */
   --breakpoint-2xl: 1680px;
 }
@@ -76,7 +81,7 @@
   --color-bg-elevated: #EAE5DA;
   --color-ink-primary: #0B0B0C;
   --color-ink-secondary: rgba(11, 11, 12, 0.72);
-  --color-ink-muted: rgba(11, 11, 12, 0.48);
+  --color-ink-muted: rgba(11, 11, 12, 0.60);
   --color-ink-overlay-white-8: rgba(11, 11, 12, 0.06);
   --color-line-hairline: rgba(11, 11, 12, 0.12);
   --color-state-error: #9C2A1E;
@@ -87,8 +92,7 @@
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    animation: none !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -105,6 +109,13 @@ body {
 
 body {
   min-height: 100dvh;
+  padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-bottom: 0;
+  }
 }
 
 /* Section wrappers apply data-theme="paper" inline — inherit canvas color */
@@ -136,6 +147,15 @@ body {
   .logo-marquee-clone {
     display: none;
   }
+}
+
+/* Hide scrollbar for date strip and chip groups */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 @media print {

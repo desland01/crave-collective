@@ -1,10 +1,17 @@
+import type { Metadata } from "next";
 import { Nav } from "@/components/compounds/Nav";
 import { Footer } from "@/components/compounds/Footer";
 import { Display } from "@/components/primitives/Display";
 import { Lead } from "@/components/primitives/Lead";
 import { Eyebrow } from "@/components/primitives/Eyebrow";
 import { Body } from "@/components/primitives/Body";
-import { ContactForm } from "@/components/compounds/ContactForm";
+import { FunnelForm } from "@/components/compounds/FunnelForm";
+
+export const metadata: Metadata = {
+  title: "Contact — Start a Film | Crave Collective",
+  description:
+    "Book a Game Plan Call with Crave Collective. Cinematic video for real estate and local service businesses in Sarasota.",
+};
 
 export default function ContactPage() {
   return (
@@ -19,21 +26,15 @@ export default function ContactPage() {
             Tell us what you want to make.
           </Display>
           <Lead className="mt-8 max-w-2xl">
-            We take two new projects a quarter. Send a short note on who you are, what you&rsquo;re building, and the room you want to film in.
+            Four quick steps. Pick the service, tell us about it, choose a time, and we&rsquo;ll call you.
           </Lead>
         </div>
       </section>
 
-      {/* Section 2 — Form */}
-      <section aria-label="Contact form" className="px-6 lg:px-12 py-16 lg:py-32 border-t border-(--color-line-hairline)">
-        <div className="mx-auto w-full max-w-[1680px] grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4">
-            <Eyebrow>The brief</Eyebrow>
-            <Body className="mt-6 max-w-sm">
-              Six fields. None of them are required. We answer every brief within two business days, with a yes, a not-this-quarter, or a counter-offer.
-            </Body>
-          </div>
-          <ContactForm />
+      {/* Section 2 — Funnel Form */}
+      <section aria-label="Booking funnel" className="px-6 lg:px-12 py-10 md:py-16 lg:py-24 border-t border-(--color-line-hairline)">
+        <div className="mx-auto h-[min(680px,calc(100dvh-104px))] min-h-[540px] w-full max-w-[720px] md:h-[660px] lg:h-[680px]">
+          <FunnelForm />
         </div>
       </section>
 
